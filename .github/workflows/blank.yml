@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
     branches: [ master ]
-    types: ['labeled', 'synchronize']
+    types: ['labeled', 'synchronize','assigned','labeled','reopened','review_requested']
 
 jobs:
   check_pr_milestone:
