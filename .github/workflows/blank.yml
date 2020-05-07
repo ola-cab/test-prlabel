@@ -1,0 +1,15 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+on:
+  pull_request:
+    branches: [ master ]
+    types: ['labeled', 'synchronize']
+
+jobs:
+  check_pr_milestone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cchantep/probot-pr-status-label@ghaction-1.0.x
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
