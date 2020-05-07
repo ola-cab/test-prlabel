@@ -13,4 +13,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: test
-        if: contains( github.event.pull_request.labels.*.name, 'patch')    
+        if: contains( github.event.pull_request.labels.*.name, 'patch')   
+        uses: actions/checkout@master  
