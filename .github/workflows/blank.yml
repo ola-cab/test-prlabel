@@ -12,3 +12,5 @@ jobs:
       - uses: cchantep/probot-pr-status-label@ghaction-1.0.x
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: test
+        if: contains( github.event.pull_request.labels.*.name, 'patch')    
